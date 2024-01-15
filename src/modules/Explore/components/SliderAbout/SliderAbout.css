@@ -1,0 +1,125 @@
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  max-width: 72.9375rem;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  flex-direction: column;
+}
+
+.slider-content img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+}
+
+.main-image {
+  
+  width: 100%;
+  border-radius: 0.9375rem;
+  background: #A5A3A3;
+  margin: 0.95rem;
+  filter: drop-shadow(8px 4px 14px rgba(0, 0, 0, 0.05));
+}
+
+.container-mini-slider {
+  width: 100%;
+  max-width: 72.9375rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mini-slides {
+  display: flex;  
+  overflow-x: auto;
+  overflow: hidden;
+
+  padding-bottom: 1rem;
+}
+
+.mini-slides img {
+  width: 23.02269rem;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0.96731rem;
+  background: #A5A3A3;
+  margin: 0.97rem;
+  filter: drop-shadow(8px 4px 14px rgba(0, 0, 0, 0.05));
+  overflow: hidden;
+}
+
+.slider-buttons {
+  width: 100%;
+  max-width: 72.9375rem;
+  height: 0.75375rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-buttons button.active {
+  width: 6.47556rem;
+  height: 0.75375rem;
+  flex-shrink: 0;
+  border-radius: 0.8125rem;
+  background: #82CBB2;
+}
+
+.slider-buttons button:not(.active) {
+  width: 3.98494rem;
+  height: 0.75375rem;
+  flex-shrink: 0;
+  border-radius: 0.8125rem;
+  background: #D9D9D9;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .slider-content {
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .slider-content img {
+    margin: 0;
+  }
+
+  .main-image {
+    display: none;
+  }
+
+  .container-mini-slider {
+    width: auto;
+    flex-grow: 1;
+    padding: 0.71rem;
+  }
+
+  .mini-slides {
+    flex-wrap: nowrap;
+    scroll-snap-type: unset;
+
+  }
+
+  .mini-slides img {
+    width: 20.09525rem;
+    margin: 0.71rem;
+    height: 29rem;
+    border-radius: 0.71431rem;
+
+
+  }
+}
